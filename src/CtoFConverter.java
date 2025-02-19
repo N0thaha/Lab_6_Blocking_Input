@@ -5,7 +5,7 @@ public class CtoFConverter {
         double celsius = 0;
         boolean validInput = false;
 
-        while (!validInput){
+        do {
             System.out.println("Enter temperature in Celsius");
             if (in.hasNextDouble()){
                 celsius = in.nextDouble();
@@ -14,7 +14,7 @@ public class CtoFConverter {
                 System.out.println("Invalid Input. Please enter a celsius value! ");
                 in.next();
             }
-        }
+        } while (!validInput);
 
         double fahrenheit = (celsius * 9/5) + 32;
         System.out.println("The equivalent temperature in fahrenheit is " + fahrenheit);
